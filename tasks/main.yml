@@ -1,0 +1,12 @@
+---
+- name: Install Nginx
+  package:
+    name: nginx
+    state: present
+  tag: nginx
+
+- name: Configure stub_status module
+  template:
+    src: status.conf.j2
+    dest: "{{ zbx_ngx_conf_d }}"
+  tag: nginx
