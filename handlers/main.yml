@@ -10,8 +10,8 @@
     state: reloaded
   tags: nginx
 
-- name: Reload Zabbix agent
+- name: Restart Zabbix agent
   service:
     name: zabbix-agent
-    state: reloaded
+    state: restarted
   tags: zabbix

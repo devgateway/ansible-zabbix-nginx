@@ -23,5 +23,5 @@
   template:
     src: nginx-params.conf.j2
     dest: "{{ zbx_ngx_userparams_dir }}/nginx-params.conf"
-  notify: Reload Zabbix agent
+  notify: Restart Zabbix agent
   tags: zabbix
