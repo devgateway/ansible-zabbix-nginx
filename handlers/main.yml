@@ -9,3 +9,9 @@
     name: nginx
     state: reloaded
   tags: nginx
+
+- notify: Reload Zabbix agent
+  service:
+    name: zabbix-agent
+    state: reloaded
+  tags: zabbix

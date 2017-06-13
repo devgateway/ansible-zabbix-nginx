@@ -11,3 +11,17 @@
     dest: "{{ zbx_ngx_conf_d }}/status.conf"
   notify: Test Nginx config
   tags: nginx
+
+- name: Install monitoring script
+  copy:
+    src: nginx-check.sh
+    dest: "{{ zbx_ngx_script_dir }}/"
+    mode: 0755
+  tags: zabbix
+
+- name: Install Zabbix Nginx user parameters
+  template:
+    src: nginx-params.conf.j2
+    dest: "{{ zbx_ngx_userparams_dir }}/nginx-params.conf"
+  notify: Reload Zabbix agent
+  tags: zabbix

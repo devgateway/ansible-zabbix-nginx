@@ -1,2 +1,4 @@
 ---
 zbx_ngx_conf_d: /etc/nginx/conf.d
+zbx_ngx_script_dir: /usr/local/bin
+zbx_ngx_userparams_dir: /etc/zabbix/zabbix_agentd.d
