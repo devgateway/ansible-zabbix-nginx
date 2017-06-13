@@ -34,10 +34,10 @@ Dependencies
 Example Playbook
 ----------------
 
-		- hosts:
-				- foo
-			roles:
-				- zabbix-nginx
+    - hosts:
+      - foo
+    roles:
+      - zabbix-nginx
 
 License
 -------
