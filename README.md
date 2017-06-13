@@ -35,9 +35,9 @@ Example Playbook
 ----------------
 
     - hosts:
-      - foo
-    roles:
-      - zabbix-nginx
+        - foo
+      roles:
+        - zabbix-nginx
 
 License
 -------
