@@ -2,10 +2,10 @@
 - name: Test Nginx config
   command: nginx -t
   notify: Reload Nginx
-  tag: nginx
+  tags: nginx
 
 - name: Reload Nginx
   service:
     name: nginx
     state: reloaded
-  tag: nginx
+  tags: nginx

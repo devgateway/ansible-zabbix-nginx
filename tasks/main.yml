@@ -3,11 +3,11 @@
   package:
     name: nginx
     state: present
-  tag: nginx
+  tags: nginx
 
 - name: Configure stub_status module
   template:
     src: status.conf.j2
     dest: "{{ zbx_ngx_conf_d }}/status.conf"
   notify: Test Nginx config
-  tag: nginx
+  tags: nginx
