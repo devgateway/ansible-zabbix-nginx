@@ -1,0 +1,12 @@
+server {
+	listen {{ zbx_ngx_port | default(10000) }};
+
+	location {{ zbx_ngx_status_uri | default("/") }} {
+		stub_status on;
+		access_log off;
+
+		allow 127.0.0.1;
+		allow ::1;
+		deny all;
+	}
+}
